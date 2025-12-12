@@ -62,27 +62,29 @@ Each of these sections are defined in the document using brackets, thus the gene
 
 #### General Section
 
-`
+```
 [general]
+
 working_directory = "None"
+
 live_config_reload = true
-`
+```
 Working Directory defines the default directory alacritty will start in when launched. 
 
 Live_config_reload allows us to change config options and see them reflected without having to restart the application. 
 
 #### Env section
 
-`
+```
 [env]
 TERM = "xterm-256color"
-`
+```
 
 This argument will allow Alacritty to use a larger colorspace for theming and customization. 
 
 #### Window arguments
 
-`
+```
 [window]
 padding = {x = 2, y = 2}
 dynamic_padding = true
@@ -90,7 +92,8 @@ decorations = "Full"
 opacity = 0.75
 blur = true
 title = "❤︎ Terminal ❤︎"
-level = "Normal" #other option = "AlwaysOnTop"`
+level = "Normal" #other option = "AlwaysOnTop"
+```
 
 Padding = determines a border around the edges of the terminal, providing default spacing for text. 
 dynamic_padding = allows this to change when resizing or executing terminal programs that need to change it. 
@@ -100,14 +103,14 @@ title = changes the text at the top of the terminal window from the default "Ala
 #### Font arguments
 **Please keep in mind these fonts will need to be installed on the system in order to be used by the alacritty temrinal**
 
-`[font]
+```[font]
 normal = {family="font family name",style="Regular"}
 bold = {family="font family name",style="Bold"}
 italic = {family="font family name" ,style="Italic"}
 bold_italic = {family="font family name" ,style="Bold Italic"}
 size = 12.00
 offset = {x = 1,y = 1}
-`
+```
 
 normal = default font 
 bold = font when using bold text
@@ -120,14 +123,15 @@ offset = spacing
 **This will determine the colors used for certain elements in the terminal, such as the cursor, highlighting text, etc. 
 this section may have sub sections such as [color.primary] for logical sorting.**
 
-`
+```
 cursor = {text = "hex value", cursor = "hex value"}
 footer_bar = {foreground = "hex value,background = "hex value"}
 selection = {text="hex value",background = "hex value"}
 [colors.primary]
 foreground = "hex value"
 background = "hex value"
-#vi_mode_cursor = "hex value`
+#vi_mode_cursor = "hex value
+```
 
 cursor = Colors which should be used to draw the terminal cursor.
 footer_bar = input, hyperlink URI preview, etc.
@@ -137,16 +141,17 @@ background = determines background color.
 
 #### Usability settings:
 **You may need to specify which shell enviroment you are using, especially if it is not the default shipped with your distro**
-`
+```
 [terminal]
 shell = {"/bin/zsh",args=["-1]}
-`
+```
 
 **You may also want to enable key bindings for copying and pasting in terminal**
-`
+```
 {Key ="c",mods ="Control",mode = "AppCursor|Vi|Search",action = "Copy"},
 {Key ="p",mods ="Control",mode = "AppCursor|Vi|Search",action = "Paste"},
-{key = "N", mods = "Control|Shift", action = "CreateNewWindow" }`
+{key = "N", mods = "Control|Shift", action = "CreateNewWindow" }
+```
 
 Implementing these arguments will give you a basic working configuration for alacritty terminal that has some simple styling to make it your own. 
 
