@@ -34,6 +34,7 @@ More information regarding this specification can be found on the Arch Wiki at [
 Editing the file can be done safely using the Alacritty terminal prior to configuration. You can do this using your prefered text editor program such as vim, vi,nvim, or nano. 
 
 *Command to edit file:*
+
 ` sudo nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml `    
 
 ### File Configuration
