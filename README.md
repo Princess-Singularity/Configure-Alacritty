@@ -27,6 +27,7 @@ When creating this file it is very beneficial to considuer using the *XDG_CONFIG
 More information regarding this specification can be found on the Arch Wiki at [XDG Base Directory](https://wiki.archlinux.org/title/XDG_Base_Directory)
 
 *Command to create the file in XDG instead:*
+
 ` touch $XDG_CONFIG_HOME/alacritty/alacritty.toml`
 
 
