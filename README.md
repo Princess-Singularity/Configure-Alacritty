@@ -18,8 +18,8 @@ Alacritty can be instlled by following their official github repository instruct
 ### Syntax & Config File Creation
   Alacritty uses the TOML format to configure it's functionality. The configuration file is not created automatically, and will have to be created manually.
 
-  ** Creating the file **
-  * Command to create the file: *
+  **Creating the file**
+*Command to create the file:*
 
 ` touch /etc/alacritty/alacritty.toml `
 
