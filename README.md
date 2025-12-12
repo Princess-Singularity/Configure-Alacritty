@@ -18,29 +18,29 @@ Alacritty can be instlled by following their official github repository instruct
 ### Syntax & Config File Creation
   Alacritty uses the TOML format to configure it's functionality. The configuration file is not created automatically, and will have to be created manually.
 
-  **Creating the file**
-  *Command to create the file:*
+  ** Creating the file **
+  * Command to create the file: *
 
 ` touch /etc/alacritty/alacritty.toml `
 
 When creating this file it is very beneficial to considuer using the *XDG_CONFIG_HOME* nomenclature provided by the XDG Base Directory specification. 
 More information regarding this specification can be found on the Arch Wiki at [XDG Base Directory](https://wiki.archlinux.org/title/XDG_Base_Directory)
 
-*Command to create the file in XDG instead:*
+* Command to create the file in XDG instead: *
 
 ` touch $XDG_CONFIG_HOME/alacritty/alacritty.toml`
 
 
 Editing the file can be done safely using the Alacritty terminal prior to configuration. You can do this using your prefered text editor program such as vim, vi,nvim, or nano. 
 
-*Command to edit file:*
+* Command to edit file: *
 
 ` sudo nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml `    
 
 ### File Configuration
 
-**The config file is sperated into different sub sections dedicated to editing specific configuration arguments broken down into categories.**
-**The sections / categories of the file are as follows:**
+** The config file is sperated into different sub sections dedicated to editing specific configuration arguments broken down into categories. **
+** The sections / categories of the file are as follows: **
 - general
 - env
 - window
@@ -59,6 +59,7 @@ Editing the file can be done safely using the Alacritty terminal prior to config
 Each of these sections are defined in the document using brackets, thus the general section starts with `[general]`
 
 #### General Section
+
 `
 [general]
 working_directory = "None"
@@ -69,6 +70,7 @@ Working Directory defines the default directory alacritty will start in when lau
 Live_config_reload allows us to change config options and see them reflected without having to restart the application. 
 
 #### Env section
+
 `
 [env]
 TERM = "xterm-256color"
@@ -77,6 +79,7 @@ TERM = "xterm-256color"
 This argument will allow Alacritty to use a larger colorspace for theming and customization. 
 
 #### Window arguments
+
 `
 [window]
 padding = {x = 2, y = 2}
@@ -94,6 +97,7 @@ title = changes the text at the top of the terminal window from the default "Ala
 
 #### Font arguments
 ** Please keep in mind these fonts will need to be installed on the system in order to be used by the alacritty temrinal**
+
 `[font]
 normal = {family="font family name",style="Regular"}
 bold = {family="font family name",style="Bold"}
@@ -113,6 +117,7 @@ offset = spacing
 #### Color arguments
 ** This will determine the colors used for certain elements in the terminal, such as the cursor, highlighting text, etc. 
 this section may have sub sections such as [color.primary] for logical sorting. **
+
 `
 cursor = {text = "hex value", cursor = "hex value"}
 footer_bar = {foreground = "hex value,background = "hex value"}
