@@ -19,6 +19,7 @@ Alacritty can be instlled by following their official github repository instruct
   Alacritty uses the TOML format to configure it's functionality. The configuration file is not created automatically, and will have to be created manually.
 
   **Creating the file**
+  
 *Command to create the file:*
 
 ` touch /etc/alacritty/alacritty.toml `
@@ -26,21 +27,22 @@ Alacritty can be instlled by following their official github repository instruct
 When creating this file it is very beneficial to considuer using the *XDG_CONFIG_HOME* nomenclature provided by the XDG Base Directory specification. 
 More information regarding this specification can be found on the Arch Wiki at [XDG Base Directory](https://wiki.archlinux.org/title/XDG_Base_Directory)
 
-* Command to create the file in XDG instead: *
+Command to create the file in XDG instead:*
 
 ` touch $XDG_CONFIG_HOME/alacritty/alacritty.toml`
 
 
 Editing the file can be done safely using the Alacritty terminal prior to configuration. You can do this using your prefered text editor program such as vim, vi,nvim, or nano. 
 
-* Command to edit file: *
+*Command to edit file:*
 
 ` sudo nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml `    
 
 ### File Configuration
 
-** The config file is sperated into different sub sections dedicated to editing specific configuration arguments broken down into categories. **
-** The sections / categories of the file are as follows: **
+**The config file is sperated into different sub sections dedicated to editing specific configuration arguments broken down into categories.**
+**The sections / categories of the file are as follows:**
+
 - general
 - env
 - window
@@ -96,7 +98,7 @@ decorations = determine window buttons available to the user, and name.
 title = changes the text at the top of the terminal window from the default "Alacritty"
 
 #### Font arguments
-** Please keep in mind these fonts will need to be installed on the system in order to be used by the alacritty temrinal**
+**Please keep in mind these fonts will need to be installed on the system in order to be used by the alacritty temrinal**
 
 `[font]
 normal = {family="font family name",style="Regular"}
@@ -115,8 +117,8 @@ size = font size
 offset = spacing 
 
 #### Color arguments
-** This will determine the colors used for certain elements in the terminal, such as the cursor, highlighting text, etc. 
-this section may have sub sections such as [color.primary] for logical sorting. **
+**This will determine the colors used for certain elements in the terminal, such as the cursor, highlighting text, etc. 
+this section may have sub sections such as [color.primary] for logical sorting.**
 
 `
 cursor = {text = "hex value", cursor = "hex value"}
@@ -134,13 +136,13 @@ foreground = determines forground color.
 background = determines background color. 
 
 #### Usability settings:
-** You may need to specify which shell enviroment you are using, especially if it is not the default shipped with your distro **
+**You may need to specify which shell enviroment you are using, especially if it is not the default shipped with your distro**
 `
 [terminal]
 shell = {"/bin/zsh",args=["-1]}
 `
 
-** You may also want to enable key bindings for copying and pasting in terminal **
+**You may also want to enable key bindings for copying and pasting in terminal**
 `
 {Key ="c",mods ="Control",mode = "AppCursor|Vi|Search",action = "Copy"},
 {Key ="p",mods ="Control",mode = "AppCursor|Vi|Search",action = "Paste"},
