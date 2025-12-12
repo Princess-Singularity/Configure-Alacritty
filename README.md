@@ -14,11 +14,13 @@ Alacritty can be instlled by following their official github repository instruct
 
 
 ---
+
 ### Syntax & Config File Creation
   Alacritty uses the TOML format to configure it's functionality. The configuration file is not created automatically, and will have to be created manually.
 
   **Creating the file**
   *Command to create the file:*
+
 ` touch /etc/alacritty/alacritty.toml `
 
 When creating this file it is very beneficial to considuer using the *XDG_CONFIG_HOME* nomenclature provided by the XDG Base Directory specification. 
@@ -34,6 +36,7 @@ Editing the file can be done safely using the Alacritty terminal prior to config
 ` sudo nvim $XDG_CONFIG_HOME/alacritty/alacritty.toml `    
 
 ### File Configuration
+
 **The config file is sperated into different sub sections dedicated to editing specific configuration arguments broken down into categories.**
 **The sections / categories of the file are as follows:**
 - general
